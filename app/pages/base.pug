@@ -1,0 +1,43 @@
+block vars 
+    -
+        var
+            pagetitle = "Base",
+            menutitle = "Base";
+
+doctype html
+html(lang="ru")
+    head
+        block head
+            //defaults
+            meta(charset='UTF-8')
+            meta(http-equiv='X-UA-Compatible' content='IE=edge')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            meta(name="format-detection" content="telephone=no")
+            //defaults end
+            
+            //-fonts
+            //- link(rel='stylesheet' type='text/css' href='assets/fonts/FONT_NAME/stylesheet.css')
+            //-fonts end
+
+            //styles
+            link(rel='stylesheet' type='text/css' href='assets/styles/style.css')
+            link(rel='stylesheet' type='text/css' href='assets/blocks/styles.css')
+            //styles end
+            
+            title #{pagetitle} | PROJECT_NAME
+    
+    body(itemscope itemtype="https://schema.org/WebPage")
+        
+        block header
+            include ../blocks/header/header.pug
+
+        block breadcrumbs
+            include ../blocks/breadcrumbs/breadcrumbs.pug
+
+        block content
+
+        block footer
+            include ../blocks/footer/footer.pug
+            
+        script(src="assets/scripts/script.js")
+        script(src="assets/blocks/scripts.js")
