@@ -133,7 +133,8 @@ const sources = {
         // blocks
             watch(sources.blocks.scss, blocks_scss);
             watch(sources.blocks.js, blocks_js);
-            watch(sources.blocks.pug, series(blocks_pug, pages));
+            // watch(sources.blocks.pug, series(blocks_pug, pages));
+            watch(sources.blocks.pug, series(pages));
     
         //pages
             watch(sources.pages, pages);

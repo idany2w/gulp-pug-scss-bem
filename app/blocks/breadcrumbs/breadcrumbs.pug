@@ -1,13 +1,14 @@
-.breadcrumbs
-    .container.px-xl-3
-        ul.breadcrumbs__list(itemscope itemtype="http://schema.org/BreadcrumbList" id="breadcrumbs")
-                li.breadcrumbs__item
-                    span(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
-                        a(href="index.html").breadcrumbs__link
-                            span(itemprop="name") Главная
-                            meta(itemprop="position" content=1)
-                li.breadcrumbs__item
-                    span(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
-                            span.breadcrumbs__link.breadcrumbs__link--active
-                                span(itemprop="name")=menutitle
-                                meta(itemprop="position" content=2)
+mixin breadcrumbs(data)
+    .breadcrumbs
+        .container.px-xl-3
+            ul.breadcrumbs__list(itemscope itemtype="http://schema.org/BreadcrumbList" id="breadcrumbs")
+                    li.breadcrumbs__item
+                        span(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                            a(href="index.html").breadcrumbs__link
+                                span(itemprop="name") Главная
+                                meta(itemprop="position" content=1)
+                    li.breadcrumbs__item
+                        span(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                                span.breadcrumbs__link.breadcrumbs__link--active
+                                    span(itemprop="name")=menutitle
+                                    meta(itemprop="position" content=2)

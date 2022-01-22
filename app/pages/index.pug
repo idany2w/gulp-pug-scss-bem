@@ -6,6 +6,8 @@ block vars
             pagetitle = "Главная",
             menutitle = "Главная";
 
+block blocks 
+
 block breadcrumbs
     //- empty
 
@@ -13,5 +15,8 @@ block content
     .section.py-5 
         .container 
             .row.d-flex.align-items-center
-                .col Hello world
-                .col This is my gulp 
+                .col-12 
+                    h1 Hello world
+                    p This is my gulp
+                each item in new Array(8)
+                    .col col

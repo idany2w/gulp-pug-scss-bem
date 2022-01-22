@@ -4,6 +4,13 @@ block vars
             pagetitle = "Base",
             menutitle = "Base";
 
+//- default_blocks
+include ../blocks/header/header.pug
+include ../blocks/breadcrumbs/breadcrumbs.pug
+include ../blocks/footer/footer.pug
+
+block blocks 
+
 doctype html
 html(lang="ru")
     head
@@ -29,15 +36,15 @@ html(lang="ru")
     body(itemscope itemtype="https://schema.org/WebPage")
         
         block header
-            include ../blocks/header/header.pug
+            +header()
 
         block breadcrumbs
-            include ../blocks/breadcrumbs/breadcrumbs.pug
+            +breadcrumbs()
 
         block content
 
         block footer
-            include ../blocks/footer/footer.pug
+            +footer()
             
         script(src="assets/scripts/script.js")
         script(src="assets/blocks/scripts.js")
