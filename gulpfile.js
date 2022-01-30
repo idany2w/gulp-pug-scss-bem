@@ -16,6 +16,7 @@ const sources = {
 	files: "app/assets/files/**/*",
 	images: "app/assets/images/**/*",
 	styles: [
+        // "node_modules/pickmeup/css/pickmeup.scss",
         "node_modules/swiper/swiper.scss",
         "app/assets/styles/**/*.scss",
 	],
@@ -47,7 +48,7 @@ const sources = {
         return src(sources.fonts).pipe(dest("dist/assets/fonts/"));
     }
     function files() {
-        return src(sources.fonts).pipe(dest("dist/assets/files/"));
+        return src(sources.files).pipe(dest("dist/assets/files/"));
     }
     function images() {
         return src(sources.images)
@@ -133,8 +134,7 @@ const sources = {
         // blocks
             watch(sources.blocks.scss, blocks_scss);
             watch(sources.blocks.js, blocks_js);
-            // watch(sources.blocks.pug, series(blocks_pug, pages));
-            watch(sources.blocks.pug, series(pages));
+            watch(sources.blocks.pug, series(blocks_pug, pages));
     
         //pages
             watch(sources.pages, pages);
